@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="log4j/src"/>
+	<classpathentry kind="lib" path="log4j/lib/._log4j-api-2.5.jar"/>
+	<classpathentry kind="lib" path="log4j/lib/._log4j-core-2.5.jar"/>
+	<classpathentry kind="lib" path="log4j/lib/log4j-api-2.5.jar"/>
+	<classpathentry kind="lib" path="log4j/lib/log4j-core-2.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,56 @@
+Practica P-CTL
+
+Alumno:
+
+Horas dedicadas:
+
+Problemas surgidos al realizar la practica:
+
+Respuestas a la preguntas:
+
+Ejercicio 4-Apartado 030101:
+En el fragmento hay 3 expresiones condicionales if:
+
+La primera sentencia imprime "Resultado 1" si la expresión condicional del if es verdadera (true).
+Ésta a su vez tiene otras 2 condiciones regidas por el operador condicional OR. La primera
+de estas condiciones tiene el operador condicional AND que afecta a opuesto de a (!a es falso)
+y a b ( es true), por lo que la primera subexpresión del condicional es false. La otra
+subexpresión indica opuesto de n2>n1(que es true), por lo que esta subexpresión vale false.
+Al valer las dos condiciones false, la primera sentencia de if es false y no imprime nada al compilar.
+
+La segunda sentencia imprime "Resultado 2" si la expresión condicional if es true.
+Esta también depende de 2 subexpresiones que se rigen por el operador condicional OR.
+La primera de ellas vale false (false||false=false), y la segunda vale true (!false),
+por lo que la setencia if es true y al compilar se imprime "Resultado 2".
+
+La ultima sentencia imprime "Resultado 3" si la expresión condicional if es true.
+Esta depende de 2 subexpresiones que se rigen por el operador condicional AND.
+La primera de ellas vale false y la segunda vale true (true||false = true). Entonces
+al resumirse la expresión en false && true , la sentencia if es false y al compilar 
+no se imprime nada.
+
+Ejercicio 9-Apartado 030101:
+En el fragmento de código se esta utilizando dos sentencias condicionales if, en las
+cuales se utiliza el operador de igualdad (==) y de no igualdad(!=)con los cuales se 
+comparan los numeros n1 y n2, de mismo valor (10), de la clase NumeroEntero.
+Al compilar, los 2 números son considerados distintos y entonces se imprime "N1 Y N2 
+son distintos", esto se debe a que el operador de igualdad (==) solo se puede utilizar
+para comparar tipos básicos. Por lo que en este caso al estar comparando tipos no básicos
+(de la clase NumeroEntero) aunque ambos números valgan los mismo, se consideran distintos
+porque son objetos diferentes.
+
+Ejercicio 10-Apartado 030101:
+Antes de modificar el método equals en la clase NumeroEntero lo que se ejecuta es el
+metodo equals que proviene de la clase Object(cuyos métodos estan en todas las clases
+de java excepto las predefinidas del API) que no compara los valores de NumeroEntero,
+en consecuencia n1 y n2 son considerados distintos.
+
+Al implementar el método equals dentro de la clase NumeroEntero se compara el valor
+de los objetos de las variables de la clase NumeroEntero. Y por lo tanto los numeros
+n1 y n2 son considerados iguales.
+
+
+Ejercicio 3-Apartado 030102:
+Los dos errores existentes se deben a que los operadores aritmeticos > y < estan 
+comparando los objetos de las variables n1 y n2 y no los valores que se les han asignado.
+

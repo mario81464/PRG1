@@ -1,0 +1,64 @@
+Practica P-VAR
+
+Alumno: Mario Álvarez García
+
+Horas dedicadas: Si las pienso me pongo tristón
+
+Problemas surgidos al realizar la practica:
+
+Respuestas a la preguntas:
+
+Ejercicio 4- Apartado 1:
+Los dos valores estan definidos con un valor decimal double.
+La variable resultado  está definida como un numero decimal "grande",
+por lo que finalmente en el print se mostrará el resultado de la resta como un double y así
+en la salida sale un numero con varios decimales.
+
+
+Ejercicio 5- Apartado 1:
+Mediante la clase BigDecimal que no es de tipo básico, se llaman al metodo de dicha clase (substract)
+y al realizar la resta se obtiene un numero aproximado (en vez de 1.2999999, 1.3). Esto se debe 
+a que esta clase es utilizada comunmente para la aproximación de calculos a una alta precisión.
+
+Ejercicio 1- Apartado 4:
+He corregido las dos últimas lineas de codigo debido a que dichas conversiones de tipo basico no 
+siguen el orden de conversion de tipos java (byte-short-int-long-float-double). En la penultima linea
+la variable de tipo short no podria pasar a ser una de tipo byte (menor tamaño), y si a una de tamaño 
+mayor de tipo int. En la ultima linea la variable de tipo int tampoco podría pasar a ser una 
+de tipo short de tamaño menor, y si a una de tipo mayor como es long. 
+
+Ejercicio 2 - Apartado 4:
+El numero 35000L inicialmente de tipo double va perdiendo precision a medida que se van realizando
+conversiones explícitas en tipos básicos de menor tamaño de bits. Dicha perdida de precisión se
+ve reflejada en los resultados en tipo byte (-72 , 8 bits) y short (-30536 ,16 bits ). En el tipo
+ básico int el número 35000 esta dentro de su rango de numeros, por lo que el numero inicial 
+ permanece intacto. 
+
+Ejercicio 4 - Apartado 4:
+Al asignar dGigante, dNormal y dMinimo (de tipo double) a las variables de tipo float, sus valores
+iniciales se ven modificados: fGigante es considerado infinito porque el numero anterior (de tipo double)
+no esta comprendido entre los limites de numeros del tipo float. Lo mismo pasa en fMinimo que es considerado
+cero al no estar el numero previo en el limite inferior de float. Y el valor de dNormal pierde
+precisión al ser este convertido en float (fMinimo).
+Por otro lado he modificado los tipos básicos de las variables b,s,i,f , ya que sus valores se
+encontraban fuera de los limites de sus respectivos tipos básicos.
+
+Ejercicio 10 - Apartado 5
+Mediante el método compareTo el compilador compara las dos cadenas y al verificar que
+no son iguales indica en la salida la diferencia en la posición de ambos caracteres 
+(los 2 primeros caracteres desiguales) en las tablas unicode. Al tener la primera cadena
+(cadena) como primer caracter desigual la P y la segunda cadena (otraCadena) la O, se indica
+su diferencia 80-79= 1.
+
+Ejericio 1- Apartado 6
+En la clase StringBuffer el método length() indica el tamaño actual del string
+almacenado en el constructor, mientras el método capacity() indica el tamaño máximo
+que se puede almacenar. En este ejercicio al sobrepasarse la capacidad por defecto de 16,
+la capacidad se dobla y adquiere el valor de 32.
+
+Ejercicio 1- Apartado 7
+Al ejecutar el ejercicio se imprime el nombre de la clase y la posición de memoria por el 
+objeto, esto se debe a que el metodo toString() que es ejecutado directamente por el println
+hereda de la clase object. Mientras que si descomentamos la inclusión del método toString
+en Alumno.java, la salida imprime el numero de identificación, nombre y nota del Alumno
+(ya que el toString en este caso hereda de la clase Alumno).
